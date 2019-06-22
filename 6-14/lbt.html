@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .main{
+            width: 600px;
+            height: 300px;
+            /*background: #00C1DE;*/
+            position: relative;
+        }
+        .main .lbt{
+            width: 600px;
+            height: 300px;
+        }
+        .main .lbt li{
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .main .lbt li img{
+            width: 100%;
+            height: 100%;
+        }
+        .right{
+            position: absolute;
+            right: 0;
+            top: 45%;
+        }
+        .left{
+            position: absolute;
+            left: 0;
+            top: 45%;
+        }
+        .circul{
+            width: auto;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 200px;
+        }
+        .circul>li{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: white;
+                margin-right: 60px;
+        }
+        .circul li.hot{
+            background: #00C1DE;
+        }
+        /*.circul li:first-child{*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    border-radius: 50%;*/
+        /*    position: absolute;*/
+        /*    left: 120px;*/
+        /*    bottom: 0px;*/
+        /*}*/
+        /*.circul li:nth-child(2){*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    !*background: white;*!*/
+        /*    border-radius: 50%;*/
+        /*    position: absolute;*/
+        /*    left: 240px;*/
+        /*    bottom: 0px;*/
+        /*}*/
+        /*.circul li:nth-child(3){*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    !*background: white;*!*/
+        /*    border-radius: 50%;*/
+        /*    position: absolute;*/
+        /*    left: 360px;*/
+        /*    bottom: 0px;*/
+        /*}*/
+        /*.circul li:nth-child(4){*/
+        /*    width: 10px;*/
+        /*    height: 10px;*/
+        /*    !*background: white;*!*/
+        /*    border-radius: 50%;*/
+        /*    position: absolute;*/
+        /*    left: 480px;*/
+        /*    bottom: 0px;*/
+        /*}*/
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="lbt.js"></script>
+</head>
+<body>
+  <div class="main">
+      <ul class="lbt">
+          <li>
+              <img src="./img/jp.jpg" alt="">
+          </li>
+          <li>
+              <img src="./img/flower.png" alt="">
+          </li>
+          <li>
+              <img src="./img/lm01.jpg" alt="">
+          </li>
+          <li>
+              <img src="./img/nvzi.jpg" alt="">
+          </li>
+      </ul>
+      <ul class="button">
+          <li class="right">
+              <img src="./img/right.png" alt="" style="background: none">
+          </li>
+          <li class="left">
+              <img src="./img/left.png" alt="" style="background: none">
+          </li>
+      </ul>
+      <ul class="circul">
+          <li class="hot"></li>
+          <li ></li>
+          <li ></li>
+          <li ></li>
+      </ul>
+  </div>
+</body>
+</html>

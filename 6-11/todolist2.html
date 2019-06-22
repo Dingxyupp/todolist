@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        header{
+            margin-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        header ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        header ul li{
+            width: 33%;
+            text-align: center;
+        }
+        header ul li.hot{
+            background: #00C1DE;
+        }
+        div{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .content input{
+            margin-top: 6px;
+            float: left;
+        }
+        .content del{
+            float: right;
+        }
+        .content span{
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="todolist2.js"></script>
+</head>
+<body>
+<header>
+    <ul class="tab">
+        <li class="hot" type="all">全部</li>
+        <li type="done">已完成</li>
+        <li type="doing">未完成</li>
+    </ul>
+</header>
+<div>
+    <ul class="content">
+
+    </ul>
+</div>
+
+</body>
+</html>

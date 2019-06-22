@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<h1 id="dxy">Jquery</h1>
+<ul class="first">
+    <i>iju</i>
+    <li>选择器</li>
+    <li>基础</li>
+</ul>
+<ul class="first1">
+    <li>
+        <span>span</span>
+    </li>
+</ul>
+<script>
+    $(function () {
+        // $("#dxy").css({color:'red'})
+        // $('#dxy ~ ul').css({color:"green"})
+        // $('[class*=first]').css({background:'red'})
+        // $('li:first-child').css({color:'green'})
+        // $('li:last-child').css({color:'green'})
+        // $('li:first-of-type').css({color:'green'})
+        // $('li:only-child').css({color:'green'})
+        $('h1:only-of-type').css({color:'green'})
+        // console.log($('h1:only-of-type'));
+    })
+
+</script>
+</body>
+</html>

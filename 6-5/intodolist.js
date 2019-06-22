@@ -1,7 +1,8 @@
 window.addEventListener('load',function () {
     let li=document.querySelectorAll('.Top>ul>li')
     let content=document.querySelector('.content')
-    let type="all"
+    let type="all";
+    let type1='done'
     let d=0;
     let todolist=[
         {id:1,content:'端午收作业',ctime:'2019-6-7',symbol:'-',stauts:false},
@@ -15,9 +16,23 @@ window.addEventListener('load',function () {
             li[i].classList.add('hot');
             d=i;
             let type=this.getAttribute('type')
-            render(filterDate(type))
+            render(filterDate(type));
+
+            content.onclick=function (e){
+                let target=e.target;
+                let id=target.parentNode.id;
+                if(target.nodeName==='I'){
+                    let index=todolist.findIndex(elem=>elem.id == id);
+                    todolist.splice(index,1);
+                }else if(target.nodeName==='INPUT'){
+                    let ele=todolist.filter(elem=>elem.id == id)[0];
+                    ele.stauts=target.checked;
+                }
+                render(filterDate(type));
+            }
         }
     }
+    li[0].onclick();
     let forms=document.myform;
     let textarea=forms.elements[0];
     let button=forms.elements['button'];
@@ -37,6 +52,7 @@ window.addEventListener('load',function () {
         let stauts=false
         return {id,content,ctime,symbol,stauts}
     }
+
     function filterDate(type){
         let arr=[];
         switch(type){
@@ -54,28 +70,6 @@ window.addEventListener('load',function () {
         }
         return arr;
     }
-    content.onclick=function (e){
-        let target=e.target;
-        let id=target.parentNode.id;
-        if(target.nodeName=='I'){
-            let index=todolist.findIndex(elem=>elem.id == id);
-            todolist.splice(index,1);
-        }else if(target.nodeName=='INPUT'){
-            let ele=todolist.filter(elem=>elem.id==id)[0];
-            ele.stauts=target.checked;
-        }
-        render(filterDate(type));
-    }
-    //存储到localStorage中
-    // let str=localStorage.getItem('todolist');
-    // if(!str){
-    //     saveData();
-    //     str=localStorage.getItem('todolist');
-    //     console.log(str);
-    // }
-    // todolist=JSON.parse(str);
-
-    render(filterDate(type))
     function render(arr){
         let html='';
         arr.forEach(function (elem) {
